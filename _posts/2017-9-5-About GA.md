@@ -90,25 +90,26 @@ GA에서 Event란, 해당 서비스에서 이뤄지는 행동을 모두 포함�
 Column은 이벤트의 나열 입니다. 이벤트역시 각각의
 #### Row 파악하기
 Row가 매우 중요합니다!(잘 안댓으면 누구 책임인지 알 수 있거든요...)각각의 Row는 어느기간에 해당 업무를 진행할 것인지, 언제까지 진행할 것인지, 그리고 가장 중요한 얼만큼 진행이 되었는지를 소통할 수 있도록 구성합니다.
-* Event
-  * Category
-  * Action
-  * Label(Description)
-  * (Value)
-* Status
-  * Open
-  * In Progress
-  * Done
-  * Reopen
-  * Resolved
-* Target Release
+* Event: 이젠 친근하시죠? GA가장 핵심인 Event에 대한 카테고리 입니다.
+  * Category: 페이지로 생각하시면 됩니다.
+  * Action: 해당 페이지에서 할 수 있는 행동 이라고 생각하시면 됩니다.
+  * Label(Description): Category와 Action만 봐도 알수 있으면 좋지만, 그렇지 못할경우를 대비해 적는 Label 또는 설명 입니다.
+  * (Value): 저는 써본적이 없어서... 패스...
+* Status: 해당 Event의 현황 여부를 파악하는 상태 입니다!
+  * Open: 아직 개발이 되지 않는 상태 입니다!
+  * In Progress: 개발자 분들이 작업을 시작한 상황입니다!
+  * Done: 해당 로그작업이 완료 된 상태 입니다!
+  * Reopen: 로그작업이 테스팅 중 정확하게 잡히지 않을 때, 테스팅 단에서 다시 오픈을 시킨 상황 입니다.
+  * Resolved: 테스팅을 통해 확실하게 로그작업이 완료되었을 때 입니다!
+* Target Release: 해당 로그를 업로드 해야하는 시점입니다! 각각의 회사나 개인이 사용하시는 개발 주기를 사용하시면 될 것 같네요 (이터레이션 이라든지, 스프린트 라든지, 아니면 마일스톤 날짜도 상관없겠죠?)
 
-## 프로세스
+### 자 그렇다면, 이제 어떤식으로 진행하는지를 봅시다.
+#### 그림으로 설명하자면 이렇습니다!
 ![음?](https://files.slack.com/files-pri/T02EMF0J1-F6HFL9NRJ/ga_tracking_process.png?pub_secret=259ee686d7)
 * Spec Final 전까지 기획에서는 로깅해야 할 이벤트 들을 정의하고 논의합니다.
 * 논의가 된 Logging Event는 개발에서는 Task로 관리, 각각의 플랫폼 별로 정리 된 ~.csv파일을 확인하고 적용시킵니다.
 * GA 관리자는 해당 부분에 대한 개발 완료 후 테스팅을 자체적으로 진행합니다.
 
-## SDK Documentation - 어플리케이션
+#### 개발자님들에게 전달드려야 하는 SDK Documentation - 어플리케이션
 * Android: [GA-Android](https://developers.google.com/analytics/devguides/collection/android/v4/)
 * iOS - Swift : [GA-iOS](https://developers.google.com/analytics/devguides/collection/ios/v3/?ver=swift)
