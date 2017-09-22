@@ -77,10 +77,30 @@ GA에서 Event란, 해당 서비스에서 이뤄지는 행동을 모두 포함�
 > 지라등으로 따로 테이블을 만들어 수정하다 보면, 피쳐 단위에서 필요한 Event Tracker가 변경될 수 있고, 특정 Tracker만 작동이 안되는 등 세세하게 작업해야 하는 상황에선 확인이 힘듭니다. 그리고 각 피쳐가 언제 들어갔는지, 언제 들어갈 예정인지를 안다면 해당  기능에 대한 행동 파악에 더 용이합니다.
 
 등등 워크시트를 만드는 이유는 더 많이 있습니다만, 글이 더 길어지면, 안읽으실것이란것을 알기에 생략하겠습니다.
-### 구조
-* GA-All.xls: 전체 GA 데이터
-* GA-Android update.csv: 기능 추가/ 개선 등의 상황으로 GA 변경 시 적용되는 Android GA 사항 업데이트
-* GA-ios update.csv: 기능 추가/ 개선 등의 상황으로 GA 변경 시 적용되는 iOS GA 사항 업데이트
+
+### Spreadsheet 구조 짜기
+저는 모바일 플랫폼에서 GA를 사용했기 때문에 전에 사용했던 방식으로 기입하겠습니다.
+이후 파이어베이스를 기반으로 한다든지, GTM을 기반으로 하는작업을 하게 된다면 이후에 다시한번 글을 적도록 할게요!
+#### 시트구조 파악하기
+* GA all: 각각의 플랫폼이 다 잘 적용이 되었는지 한눈에 파악할 수 있는 대시보드 입니다. (관리자 or 기획자가 많이 보겠죠?)
+* GA Android: Android의 GA 적용여부를 파악하는 시트 입니다.(Andrid 개발자와 기획자, 그리고 QA가 확인하겠죠?)
+* GA iOS: iOS의 GA 적용여부를 파악하는 시트 입니다. (iOS 개발자와 기획자, 그리고 QA가 확인하겠죠?)
+#### Column 파악하기
+Column은 이벤트의 나열 입니다. 이벤트역시 각각의
+#### Row 파악하기
+Row가 매우 중요합니다!(잘 안댓으면 누구 책임인지 알 수 있거든요...)각각의 Row는 어느기간에 해당 업무를 진행할 것인지, 언제까지 진행할 것인지, 그리고 가장 중요한 얼만큼 진행이 되었는지를 소통할 수 있도록 구성합니다.
+* Event
+  * Category
+  * Action
+  * Label(Description)
+  * (Value)
+* Status
+  * Open
+  * In Progress
+  * Done
+  * Reopen
+  * Resolved
+* Target Release
 
 ## 프로세스
 ![음?](https://files.slack.com/files-pri/T02EMF0J1-F6HFL9NRJ/ga_tracking_process.png?pub_secret=259ee686d7)
