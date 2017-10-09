@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-안녕하세요 저는 박세호 라고 합니다.
+안녕하세요, 저는 박세호 라고 합니다.
 
 ### More Information
 
